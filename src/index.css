@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+
+@theme {
+  --color-mint-500: oklch(0.72 0.11 178);
+  --color-hoverColor: #FFC000;
+  --color-brightColor: #dd8036;
+  --color-backgroundColor: #36ae9a;
+}
