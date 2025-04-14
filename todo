@@ -4,3 +4,4 @@
 - make sure every routing starts the routed page from the top (later)
 - implement single blog page.
 - fill every red space with the appropriate marterial.
+- to resolve the nested a make user of onclick with div and then handle the navigation outside. you get the message?

@@ -3,5 +3,6 @@ export const PATHS = {
   ABOUT: "/about",
   CONTACT: "/contact",
   BLOG: "/blog",
-SERVICES: "/services",
+  SERVICES: "/services",
+  SINGLE_BLOG: "/single-blog",
 };

@@ -8,6 +8,7 @@ import { PATHS } from "./paths";
 import { Home } from "../pages/Home";
 import { SharedLayout } from "../layouts/SharedLayout";
 import { Services } from "../pages/Services";
+import Blog from "../pages/Blog";
 
 export default function AppRoutes() {
   const element = useRoutes([
@@ -23,9 +24,9 @@ export default function AppRoutes() {
           element: <About />,
         },
         {
-            path: PATHS.SERVICES,
-            element: <Services />,
-          },
+          path: PATHS.SERVICES,
+          element: <Services />,
+        },
         {
           path: PATHS.CONTACT,
           element: <Contact />,
@@ -33,6 +34,10 @@ export default function AppRoutes() {
         {
           path: PATHS.BLOG,
           element: <Blogs />, // optional blog page
+        },
+        {
+          path: `${PATHS.SINGLE_BLOG}/:id`,
+          element: <Blog />, // optional blog page
         },
       ],
     },

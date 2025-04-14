@@ -1,8 +1,19 @@
 import React from "react";
+import { PATHS } from "../../routes/paths";
+import { useNavigate } from "react-router-dom";
 
-const BlogCard = ({ img, headlines }) => {
+const BlogCard = ({ img, headlines, id }) => {
+  const navigate = useNavigate();
+
+  const handleOnclick = (id) => {
+    navigate(`${PATHS.SINGLE_BLOG}/${id}`);
+  };
+
   return (
-    <div className=" w-full lg:w-1/4 p-2 shadow-lg space-y-2 rounded-lg cursor-pointer hover:scale-105 transition duration-300 ease-in-out">
+    <div
+      className=" w-full lg:w-1/4 p-2 shadow-lg space-y-2 rounded-lg cursor-pointer hover:scale-105 transition duration-300 ease-in-out"
+      onClick={() => handleOnclick(id)}
+    >
       <img
         className=" h-64 md:h-96 lg:h-40 w-full rounded-lg"
         src={img}
