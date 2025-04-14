@@ -6,11 +6,21 @@ export const Home = () => {
   return (
     <div className="">
       <Hero />
-      <div className="w-full h-screen bg-red-600 my-2">Missiong Statement</div>
-      <div className="w-full h-screen bg-red-600 my-2">How it works</div>
-      <ServicesSection />
-      <div className="w-full h-screen bg-red-600 my-2">Partners</div>
-      <div className="w-full h-screen bg-red-600 my-2">CTA</div>
+      <div className="w-full h-screen bg-red-600 my-2" id="mission">
+        Missiong Statement
+      </div>
+      <div className="w-full h-screen bg-red-600 my-2" id="how-it-works">
+        How it works
+      </div>
+      <div id="services">
+        <ServicesSection />
+      </div>
+      <div className="w-full h-screen bg-red-600 my-2" id="partners">
+        Partners
+      </div>
+      <div className="w-full h-screen bg-red-600 my-2" id="cta">
+        CTA
+      </div>
     </div>
   );
 };

@@ -3,7 +3,35 @@ import { Link } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { PATHS } from "../../routes/paths";
 import { BiLink } from "react-icons/bi";
+import Optionals from "../common/Optionals";
 // import Contact from "../models/Contact";
+
+const menuItems = [
+  { type: "link", label: "Mission Statement", to: "mission" },
+  { type: "link", label: "How it works", to: "how-it-works" },
+  { type: "link", label: "Our Services", to: "services" },
+  { type: "link", label: "Our Partners", to: "partners" },
+  { type: "link", label: "CTA", to: "cta" },
+];
+
+const menuItemsAbout = [
+  { type: "link", label: "About us", to: "aboutus" },
+  { type: "link", label: "Meet Our Team", to: "team" },
+  { type: "link", label: "Testimonials", to: "testimonials" },
+  { type: "link", label: "Vision and Mission", to: "vision-mission" },
+];
+
+const menuItemsService = [
+  { type: "link", label: "Consultancy", to: "consultancy" },
+  { type: "link", label: "Get Records", to: "records" },
+];
+
+const menuItemsContacts = [
+  { type: "link", label: "FAQs", to: "faqs" },
+  { type: "link", label: "Contact Form", to: "contacts" },
+  { type: "link", label: "News Letter", to: "news-letter" },
+  { type: "link", label: "Social Links", to: "social-links" },
+];
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -31,7 +59,7 @@ const Navbar = () => {
       <div>
         <div className=" flex flex-row justify-between p-5 md:px-32 px-5 bg-backgroundColor shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
           <div className=" flex flex-row items-center cursor-pointer">
-            <Link to={PATHS.HOME} >
+            <Link to={PATHS.HOME}>
               <h1 className=" text-2xl font-semibold">GolvHealth</h1>
             </Link>
           </div>
@@ -39,24 +67,21 @@ const Navbar = () => {
           <nav className=" hidden lg:flex flex-row items-center text-lg font-medium gap-8">
             <Link
               to={PATHS.HOME}
-              
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              Homes
+              <Optionals title="Home" items={menuItems} />
             </Link>
             <Link
               to={PATHS.ABOUT}
-             
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              About Us
+              <Optionals title="About us" items={menuItemsAbout} />
             </Link>
             <Link
               to={PATHS.SERVICES}
-              
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
-              Services
+              <Optionals title="Services" items={menuItemsService} />
             </Link>
             {/* <Link
               to="doctors"
@@ -69,7 +94,6 @@ const Navbar = () => {
             </Link> */}
             <Link
               to={PATHS.BLOG}
-             
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
               Blog
@@ -78,10 +102,10 @@ const Navbar = () => {
 
           <div className=" hidden lg:flex">
             <Link
-              className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out"
+              className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-white hover:text-hoverColor transition duration-300 ease-in-out"
               to={PATHS.CONTACT}
             >
-              Contact Us
+              <Optionals title="Contacts" items={menuItemsContacts} />
             </Link>
           </div>
 
@@ -103,7 +127,6 @@ const Navbar = () => {
         >
           <Link
             to={PATHS.HOME}
-          
             className=" hover:text-hoverColor transition-all cursor-pointer"
             onClick={closeMenu}
           >
@@ -111,7 +134,6 @@ const Navbar = () => {
           </Link>
           <Link
             to={PATHS.ABOUT}
-            
             className=" hover:text-hoverColor transition-all cursor-pointer"
             onClick={closeMenu}
           >
@@ -119,7 +141,6 @@ const Navbar = () => {
           </Link>
           <Link
             to={PATHS.SERVICES}
-          
             className=" hover:text-hoverColor transition-all cursor-pointer"
             onClick={closeMenu}
           >
@@ -137,7 +158,6 @@ const Navbar = () => {
           </Link> */}
           <Link
             to={PATHS.BLOG}
-            
             className=" hover:text-hoverColor transition-all cursor-pointer"
             onClick={closeMenu}
           >
